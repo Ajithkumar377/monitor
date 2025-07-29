@@ -19,7 +19,7 @@ pipeline {
           sh '''
             docker login -u $USER -p $PASS
             docker tag flask-app ajithkumar377/flask-app
-            docker push yourdockerhub/flask-app
+            docker push ajithkumar377/flask-app
           '''
         }
       }
