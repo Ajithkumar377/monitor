@@ -18,7 +18,7 @@ pipeline {
         withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
           sh '''
             docker login -u $USER -p $PASS
-            docker tag flask-app yourdockerhub/flask-app
+            docker tag flask-app ajithkumar377/flask-app
             docker push yourdockerhub/flask-app
           '''
         }
